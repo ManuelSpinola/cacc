@@ -8,3 +8,5 @@ Description: Contains geospatial data of Central America to do climate change an
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 2.10)
