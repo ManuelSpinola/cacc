@@ -3,7 +3,7 @@ cacc: Central America climate change
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# cacc \# crcc <img src="man/figures/logo.png" align="right" height="139" />
+# cacc <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 <!-- badges: end -->
