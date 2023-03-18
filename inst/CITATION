@@ -6,7 +6,7 @@ citEntry(
   author   = "Manuel Spínola",
   note     = "R package version 0.1.0",
   year     = "2023",
-  url      = "https://github.com/ManuelSpinola/crcc",
+  url      = "https://github.com/ManuelSpinola/cacc",
   textVersion = paste("Manuel Spínola (2023).",
                 "cacc: Central America climate change.",
                 "R package version 0.1.0.",
