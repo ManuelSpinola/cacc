@@ -48,8 +48,8 @@
 #'
 #' @examples
 #'
-#' climate <- ca_future_worldclim(variable = "tmax",
-#'   resolution = 10,
+#' climate <- ca_future_worldclim(var = "tmax",
+#'   res = 10,
 #'   gcm = "ACCESS-CM2",
 #'   ssp = "ssp126",
 #'   interval = "2041-2060")
@@ -64,7 +64,7 @@ ca_future_worldclim <- function(var, res, gcm, ssp, interval) {
   library(cageo)
 
   # Download the data
-  data <- future_worldclim2(var = variable, res = resolution, gcm, ssp, interval, bry = ca_outline_d)
+  data <- future_worldclim2(var, res, gcm, ssp, interval, bry = ca_outline_d)
 
   # Return the data
   return(data)
