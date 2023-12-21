@@ -45,7 +45,11 @@ e.g., using `options(timeout = 1e3)`.
 }
 \examples{
 
-climate <- ca_future_worldclim(variable = "tmax", resolution = 10, gcm = "ACCESS-CM2", ssp = "ssp126", interval = "2041-2060")
+climate <- ca_future_worldclim(variable = "tmax",
+resolution = 10,
+gcm = "ACCESS-CM2",
+ssp = "ssp126",
+interval = "2041-2060")
 
 }
 \references{
