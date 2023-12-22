@@ -8,7 +8,7 @@
 #'
 #' This function is a wrapper of the future_worldclim2 function from the \href{https://lleisong.github.io/itsdm/index.html}{itsdm} package.
 #'
-#' @usage ca_future_worldclim(variable, resolution, gcm, ssp, interval)
+#' @usage ca_future_worldclim(var, res, gcm, ssp, interval)
 #'
 #' @param var (\code{character}) The option for the variable to download.
 #' Should be one of tmin, tmax, prec, bioc.
