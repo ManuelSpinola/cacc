@@ -1,5 +1,3 @@
-cacc: Central America climate change
-================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -26,7 +24,6 @@ devtools::install_github("ManuelSpinola/cacc")
 This is a basic example which shows you how to use the package:
 
 ``` r
-## basic example code
 library(cacc)
 library(tidyverse)
 library(sf)
@@ -50,4 +47,4 @@ ggplot() +
   coord_equal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
