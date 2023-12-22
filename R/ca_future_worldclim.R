@@ -63,7 +63,7 @@
 
 library(stars)
 
-ca_future_worldclim <- function(var, res, gcm, ssp, interval) {
+ca_future_worldclim <- function(var, res, gcm, ssp, interval, path) {
   # Load the necessary packages
   library(itsdm)
   library(cageo)
