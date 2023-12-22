@@ -34,16 +34,20 @@ library(stars)
 ```
 
 ``` r
-climate <- ca_future_worldclim(var = "tmax",
+max_temp <- ca_future_worldclim(var = "tmax",
   res = 10,
   gcm = "ACCESS-CM2",
   ssp = "ssp126",
-  interval = "2041-2060")
-#>  _ _           _
-#> (_) |_ ___  __| |_ __ ___
-#> | | __/ __|/ _` | '_ ` _ \
-#> | | |_\__ \ (_| | | | | | |
-#> |_|\__|___/\__,_|_| |_| |_| Version 0.2.1
-#> Warning in st_crop.stars(clip_imgs, bry): st_crop: bounding boxes of x and y do
-#> not overlap
+  interval = "2041-2060",
+  path = tempdir())
 ```
+
+``` r
+ggplot() +
+  geom_stars(data = max_temp) +
+  scale_fill_viridis_c(name = "Temperatura (°C)", na.value = "transparent", option = "C", direction = -1) +
+  theme_minimal() +
+  coord_equal()
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
