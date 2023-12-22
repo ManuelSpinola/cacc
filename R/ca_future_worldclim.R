@@ -28,6 +28,10 @@
 #' Should be one of "2021-2040", "2041-2060", "2061-2080", "2081-2100".
 #' The default is "2021-2040".
 #'
+#' @param path (\code{character}) The path to save the downloaded imagery.
+#' If \code{NULL}, it would use the current working directory.
+#' The default is \code{NULL}.
+#'
 #' @return if \code{return_stack} is \code{TRUE}, the images would be
 #' returned as a \code{stars}. Otherwise, nothing to return, but the user
 #' would receive a message of where the images are.
@@ -52,7 +56,8 @@
 #'   res = 10,
 #'   gcm = "ACCESS-CM2",
 #'   ssp = "ssp126",
-#'   interval = "2041-2060")
+#'   interval = "2041-2060",
+#'   path = tempdir())
 #'
 #' @export
 
@@ -64,7 +69,7 @@ ca_future_worldclim <- function(var, res, gcm, ssp, interval) {
   library(cageo)
 
   # Download the data
-  data <- future_worldclim2(var, res, gcm, ssp, interval, bry = ca_outline_d)
+  data <- future_worldclim2(var, res, gcm, ssp, interval, bry = ca_outline_d, path)
 
   # Return the data
   return(data)

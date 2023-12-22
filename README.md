@@ -34,11 +34,16 @@ library(stars)
 ```
 
 ``` r
-ggplot() +
-  geom_stars(data = ca_inm_cm4_8_ssp126_2021_2040[,,,1]) +
-  scale_fill_viridis_c(name = "Annual Mean Temperature", option = "C", na.value = "transparent", direction = -1) +
-  theme_minimal() +
-  coord_equal()
+climate <- ca_future_worldclim(var = "tmax",
+  res = 10,
+  gcm = "ACCESS-CM2",
+  ssp = "ssp126",
+  interval = "2041-2060")
+#>  _ _           _
+#> (_) |_ ___  __| |_ __ ___
+#> | | __/ __|/ _` | '_ ` _ \
+#> | | |_\__ \ (_| | | | | | |
+#> |_|\__|___/\__,_|_| |_| |_| Version 0.2.1
+#> Warning in st_crop.stars(clip_imgs, bry): st_crop: bounding boxes of x and y do
+#> not overlap
 ```
-
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />

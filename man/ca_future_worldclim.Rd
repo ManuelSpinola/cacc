@@ -24,6 +24,10 @@ The default is "ssp585".}
 \item{interval}{(\code{character}) The option for time interval.
 Should be one of "2021-2040", "2041-2060", "2061-2080", "2081-2100".
 The default is "2021-2040".}
+
+\item{path}{(\code{character}) The path to save the downloaded imagery.
+If \code{NULL}, it would use the current working directory.
+The default is \code{NULL}.}
 }
 \value{
 if \code{return_stack} is \code{TRUE}, the images would be
@@ -49,7 +53,8 @@ climate <- ca_future_worldclim(var = "tmax",
   res = 10,
   gcm = "ACCESS-CM2",
   ssp = "ssp126",
-  interval = "2041-2060")
+  interval = "2041-2060",
+  path = tempdir())
 
 }
 \references{
