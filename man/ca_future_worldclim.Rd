@@ -4,7 +4,7 @@
 \alias{ca_future_worldclim}
 \title{Download future climate data for Central America}
 \usage{
-ca_future_worldclim(variable, resolution, gcm, ssp, interval)
+ca_future_worldclim(var, res, gcm, ssp, interval)
 }
 \arguments{
 \item{var}{(\code{character}) The option for the variable to download.
