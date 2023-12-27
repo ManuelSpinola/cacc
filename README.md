@@ -25,6 +25,7 @@ This is a basic example which shows you how to use the package:
 
 ``` r
 library(cacc)
+library(cageo)
 library(tidyverse)
 library(sf)
 library(stars)
@@ -36,7 +37,8 @@ max_temp <- ca_future_worldclim(var = "tmax",
   gcm = "ACCESS-CM2",
   ssp = "ssp126",
   interval = "2041-2060",
-  path = tempdir())
+  path = tempdir(),
+  return_stack = TRUE)
 ```
 
 ``` r
