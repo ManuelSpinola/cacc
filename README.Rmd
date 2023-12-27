@@ -59,6 +59,8 @@ max_temp <- ca_future_worldclim(var = "tmax",
 ```
 
 ```{r}
+#| message: false
+#| warning: false
 ggplot() +
   geom_stars(data = max_temp) +
   scale_fill_viridis_c(name = "Temperatura (°C)", na.value = "transparent", option = "C", direction = -1) +
