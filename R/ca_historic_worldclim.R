@@ -1,32 +1,21 @@
 #'
-#' @name ca_future_worldclim
+#' @name ca_historic_worldclim
 #'
-#' @title Download future climate data for Central America
+#' @title Download historic climate data for Central America
 #'
 #' @description This function allows you to parse from worldclim version 2.1
-#' future climatic files for Central America.
+#' historic climatic files for Central America.
 #'
-#' This function is a wrapper of the future_worldclim2 function from the \href{https://lleisong.github.io/itsdm/index.html}{itsdm} package.
+#' This function is a wrapper of the worldclim2 function from the \href{https://lleisong.github.io/itsdm/index.html}{itsdm} package.
 #'
-#' @usage ca_future_worldclim(var, res, gcm, ssp, interval, path, return_stack = TRUE)
+#' @usage ca_historic_worldclim(var, res, path, return_stack)
 #'
 #' @param var (\code{character}) The option for the variable to download.
-#' Should be one of tmin, tmax, prec, bioc.
+#' Should be one of tmin, tmax, prec, bio.
 #' The default is tmin.
 #'
 #' @param res (\code{numeric}) The option for the resolution of image to
 #' download. Should be one of 0.5, 2.5, 5, 10. The default is 10.
-#'
-#' @param gcm (\code{character}) The option for global climate models.
-#' Check https://www.worldclim.org for all available GCM.
-#'
-#' @param ssp (\code{character}) The option for Shared Socio-economic Pathways.
-#' Should be one of "ssp126", "ssp245", "ssp370", "ssp585".
-#' The default is "ssp585".
-#'
-#' @param interval (\code{character}) The option for time interval.
-#' Should be one of "2021-2040", "2041-2060", "2061-2080", "2081-2100".
-#' The default is "2021-2040".
 #'
 #' @param path (\code{character}) The path to save the downloaded imagery.
 #' If \code{NULL}, it would use the current working directory.
@@ -57,11 +46,8 @@
 #'
 #' @examples
 #'
-#' climate <- ca_future_worldclim(var = "tmax",
+#' climate <- ca_historic_worldclim(var = "tmax",
 #'   res = 10,
-#'   gcm = "ACCESS-CM2",
-#'   ssp = "ssp126",
-#'   interval = "2041-2060",
 #'   path = tempdir(),
 #'   return_stack = TRUE)
 #'
@@ -75,7 +61,7 @@ ca_future_worldclim <- function(var, res, gcm, ssp, interval, path) {
   library(cageo)
 
   # Download the data
-  data <- future_worldclim2(var, res, gcm, ssp, interval, bry = ca_outline_d, path, return_stack)
+  data <- future_worldclim2(var, res, bry = ca_outline_d, path, return_stack)
 
   # Return the data
   return(data)
