@@ -61,7 +61,7 @@ ca_future_worldclim <- function(var, res, gcm, ssp, interval, path) {
   library(cageo)
 
   # Download the data
-  data <- future_worldclim2(var, res, bry = ca_outline_d, path, return_stack)
+  data <- worldclim2(var, res, bry = ca_outline_d, path, return_stack)
 
   # Return the data
   return(data)
