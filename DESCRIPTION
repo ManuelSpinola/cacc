@@ -13,7 +13,8 @@ Depends:
 RoxygenNote: 7.2.3
 URL: https://manuelspinola.github.io/cacc/
 Imports:
-    itsdm
+    itsdm,
+    geodata
 Suggests:
     cageo
 
